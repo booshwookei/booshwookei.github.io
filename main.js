@@ -1,23 +1,29 @@
-var dog_chihuahua {
-	cost: 10,
-	effect: 1,
-	enabled: false,
-	active: false;
-}
-var dog_retriever {
-	cost: 100,
-	effect: 10,
-	enabled: false,
-	active: false
-}
-var dog_lab {
-	cost: 1000,
-	effect: 100,
-	enabled: false,
-	active: false
+var gameData = {
+	total_barks: 0,
+	barks: 0,
+	clicks: 0,
+	barks_per_click: 1
+
 }
 
-window.setInterval(function() {
+var update = window.setInterval(function() {
+	$("#bark_counter").html(gameData.barks + " barks");
 
+}, 1);
 
-} 1);
+$(document).ready(function() {
+	$("#bark").click(function(){
+		incrementBarks();
+		dog_chihuahua.show();
+	})
+	organicKibble.setup();
+	organicKibble.hide();
+	spikeCollar.setup();
+	spikeCollar.hide();
+	dog_chihuahua.setup();
+	dog_chihuahua.hide();
+});
+
+function incrementBarks(){
+	gameData.barks += gameData.barks_per_click;
+}

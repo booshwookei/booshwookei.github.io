@@ -9,7 +9,7 @@ var gameData = {
 
 var update = window.setInterval(function() {
 	$("#bark_counter").html(gameData.barks.toFixed(2) + " barks");
-	$("#barks_per_second").html(gameData.barks_per_second * gameData.bps_multiplier)+ " barks per second");
+	$("#barks_per_second").html((gameData.barks_per_second * gameData.bps_multiplier)+ " barks per second");
 	
  // DOG UNLOCKS
 

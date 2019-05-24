@@ -87,7 +87,7 @@ var loudBarks = new Upgrade({
 	cost: 1000,
 	id: "spikeCollar",
 	effect: () => {
-		gameData.barks_per_click *= 1.5;
+		gameData.bps_modifier += 1.5;
 	}
 });
 var arr_upgrades = new Array(
